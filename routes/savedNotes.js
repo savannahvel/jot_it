@@ -1,5 +1,5 @@
 const fs = require('fs');
-const uuid = require('uuid');
+const uuid = require('../helpers/uuidUtility');
 const util = require('util');
 
 const readFile = util.promisify(fs.readFile);
@@ -38,7 +38,7 @@ class SavedNotes {
         const nextNote = {
             title,
             text,
-            id: uuid,
+            id: uuid(),
         };
         
         return this.getAllNotes()
