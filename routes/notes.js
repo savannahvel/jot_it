@@ -14,22 +14,6 @@ router.post('/notes', (req, res) => {
   .catch((err) => res.status(500).json(err));
 });
 
-// router
-//     //get specific note
-//     .route("/:noteId")
-//     .get((req, res) => {
-//         SavedNotes
-//         req.params.noteId = req.params.noteId;
-//         res.send('Get Note');
-//     })
-//     .put((req, res) => {
-//     req.params.noteId = req.params.noteId;
-//     res.send('Update Note');
-//     })
-//     .delete((req, res) => {
-//     req.params.noteId = req.params.noteId;
-//     res.send('Delete Note');
-// })
 
 router.delete('/notes/:id', (req, res) => {
   SavedNotes

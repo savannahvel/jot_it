@@ -25,11 +25,8 @@ app.get('/notes', (req, res) => {
 app.get('/api/notes', (req, res) => res.json(notesData));
 
 // route for homepage
-// GET Route for homepage
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, './public/index.html'))
 );
-
-
 
 app.listen(PORT)
