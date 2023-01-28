@@ -15,17 +15,7 @@ class SavedNotes {
     }
 
     getAllNotes() {
-        return this.read().then((notes) => {
-
-            let parsedNotes;
-            try {
-                parsedNotes = [].concat(JSON.parse(notes));
-            } catch (err) {
-                parsedNotes = [];
-            }
-
-            return parsedNotes;
-        })
+        return this.read().then((notes) => [].concat(JSON.parse(notes)));
     };
 
     addNewNote(note) {
